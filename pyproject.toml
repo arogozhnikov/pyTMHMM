@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "numpy>=1.24", "cython>=0.29"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyTMHMM"
+version = "1.3.6"
+description = "A transmembrane helix finder."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT License"}
+authors = [
+    {name = "Brian Osborne", email = "bosborne@alum.mit.edu"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+plotting = ["matplotlib"]
+build = ["numpy>=1.24", "cython>=0.29"]
+test = ["numpy>=1.24"]
+
+[project.urls]
+Homepage = "https://github.com/bosborne/pyTMHMM/"
+
+[project.scripts]
+pyTMHMM = "pyTMHMM.cli:cli"
+
+[tool.setuptools]
+zip-safe = false
+packages = ["pyTMHMM"]
+
+[tool.setuptools.package-data]
+pyTMHMM = ["TMHMM2.0.model", "hmm.pyx"]

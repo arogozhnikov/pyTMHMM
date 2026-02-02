@@ -37,7 +37,7 @@ def viterbi(sequence,
     emissions = np.log(emissions)
 
     cdef np.ndarray[DTYPE_t, ndim=2] M = np.zeros([2, no_states],dtype=DTYPE)
-    cdef np.ndarray[np.int_t, ndim=2] P = np.zeros([no_observations, no_states], dtype=int)
+    cdef np.ndarray[np.intp_t, ndim=2] P = np.zeros([no_observations, no_states], dtype=int)
     cdef unsigned int i, j, k, max_state, next_state, observation
     cdef double max_state_prob, prob
 

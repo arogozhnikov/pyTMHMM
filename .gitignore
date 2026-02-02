@@ -19,6 +19,7 @@ var/
 *.annotation
 *.summary
 *.plot
+.venv/
 
 # Cython-generated
 *.c
