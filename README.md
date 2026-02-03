@@ -19,3 +19,5 @@ uv publish wheelhouse/*.whl
 uv publish
 ```
 
+Published on pypi as pytmhmm_binaries.
+
